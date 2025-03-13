@@ -1,5 +1,5 @@
 /* =================================================================== 
- *  Knox Main Stylesheet
+ *  DiscoSAN Main Stylesheet
  *  Ver. 1.0.0
  *  03-23-2021
  * ------------------------------------------------------------------
@@ -87,7 +87,7 @@
  * ------------------------------------------------------------------- */
 :root {
 
-    /* color-1(#5B5E53)
+    /* color-1(#00A2C0)
      * color-2(#36151E)
      * color-3(#FFE4AF)
      */
@@ -301,7 +301,27 @@
         --gutter : 1rem;
     }
 }
+/* Change button hover and focus color */
+.btn:hover,
+.btn:focus,
+button:hover,
+button:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+    background-color: #00A2C0 !important;
+    border-color: #00A2C0 !important;
+    color: #fff !important;
+}
 
+/* Change active tab color */
+.tab-nav__list li[data-tab-active]::before,
+.tab-nav__list li a:hover {
+    background-color: #00A2C0 !important;
+}
+
+.tab-nav__list li a[data-tab-active] {
+    color: #fff !important;
+}
 
 /* ====================================================================
  * # NORMALIZE
@@ -3916,8 +3936,14 @@ img.u-pull-left {
 
 .ss-go-top a:focus,
 .ss-go-top a:hover {
-    background-color : var(--color-1-darker);
-    border-color     : var(--color-1-darker);
+    background-color: #00A2C0 !important; /* Set default color */
+    border: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.go-top:hover,
+.go-top:focus {
+    background-color: #0088A3 !important; /* Slightly darker shade for hover */
 }
 
 .ss-go-top a:focus svg path,
